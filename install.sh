@@ -112,6 +112,13 @@ echo -e "${COLOR_NONE}"
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
+echo -e "${COLOR_COMMENT}"
+echo "=============================="
+echo "= Installing MySql-Server       ="
+echo "=============================="
+echo -e "${COLOR_NONE}"
+sudo apt-get install mysql-server
+
 echo -e "${COLOR_INFO}"
 echo "=============================="
 echo "= Script Complete            ="
