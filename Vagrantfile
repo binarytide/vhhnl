@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.network :forwarded_port, guest: 80, host: 8080
 
-    config.vm.network :private_network, :ip => "10.0.1.106"
+    config.vm.network :private_network, :ip => "172.22.22.22"
 
     config.vm.provision :shell, :path => "install.sh"
 
