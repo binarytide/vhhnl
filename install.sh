@@ -117,7 +117,9 @@ echo "=============================="
 echo "= Installing MySql-Server       ="
 echo "=============================="
 echo -e "${COLOR_NONE}"
-sudo apt-get install mysql-server
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+sudo apt-get -y install mysql-server
 
 echo -e "${COLOR_INFO}"
 echo "=============================="
